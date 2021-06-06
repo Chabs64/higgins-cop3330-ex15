@@ -17,19 +17,37 @@ If the password matches, the program should display “Welcome!” If it doesn�
 Example Output
 What is the password? 12345
 I don't know you.
+
 Or
 
 What is the password? abc$123
 Welcome!
+
 Constraints
 Use an if/else statement for this problem.
 Make sure the program is case sensitive.
  */
 
-public class App 
+import java.util.Scanner;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("What is your password?");
+        String passwordEntry = in.nextLine();
+
+        String password = "abc$123";
+
+        if(passwordEntry.equals(password))
+        {
+            System.out.println("Welcome!");
+        }
+        else
+        {
+            System.out.println("I don't know you.");
+        }
     }
 }
